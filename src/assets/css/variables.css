@@ -1,0 +1,20 @@
+:root{
+    --primaryColor: #6b8ef7;
+    --secondaryColor: #AA90FD;
+    --accentColor: #8565E9;
+}
+
+/* fonts assets */
+
+/*font-family: 'Poppins', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/*font-family: 'Leckerli One', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+
+.base-font{
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-font{
+    font-family: 'Leckerli One', cursive;
+}
