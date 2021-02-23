@@ -1,0 +1,42 @@
+@media screen and (max-width: 380px){
+    body{
+        background-image: unset !important;
+        background-color: #f0f0f0;
+        font-size: 14px;
+        overflow-x: hidden;
+    }
+    nav {
+        display: none;
+    }
+
+    .header .right input{
+        max-width:80%
+    }
+
+    footer{
+        width: 100% !important;
+    }
+
+    footer > .card{
+        min-height: 17rem !important;
+    }
+
+    footer .card .wrapper{
+        max-height: 65%;
+    }
+
+    footer .card .wrapper.card{
+        padding: 5px 8px;
+    }
+
+    .content img.weather-icon{
+        width: 320px !important;
+        height: 320px !important;
+    }
+
+    .content .badge-primary{
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
