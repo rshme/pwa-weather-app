@@ -21,9 +21,9 @@
         min-height: 17rem !important;
     }
 
-    footer .card .wrapper{
-        max-height: 65%;
-    }
+    /*footer .card .wrapper{*/
+    /*    max-height: 65%;*/
+    /*}*/
 
     footer .card .wrapper.card{
         padding: 5px 8px;
@@ -32,6 +32,11 @@
     .content img.weather-icon{
         width: 320px !important;
         height: 320px !important;
+    }
+
+    footer .card img.weather-icon{
+        width: 70px;
+        height:70px;
     }
 
     .content .badge-primary{

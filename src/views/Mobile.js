@@ -11,15 +11,15 @@ export default function Mobile({ weather, diffToHuman }){
                     <h1 className="text-4xl font-bold text-primary">Jakarta</h1>
                 </div>
 
-                <div className="w-full flex justify-center mb-7">
+                <div className="w-full flex justify-center mb-8">
                     <div className="content">
-                        <img src={`http://openweathermap.org/img/wn/${weather.current.weather[0].icon}@4x.png`} alt="" className="weather-icon -mb-16 -mt-24"/>
-                        <div className="badge-primary shadow-inner py-3 px-5 rounded-full text-center mb-6 mt-3">
+                        <img src={`http://openweathermap.org/img/wn/${weather.current.weather[0].icon}@4x.png`} alt="" className="weather-icon -mb-16 -mt-28"/>
+                        <div className="badge-primary shadow-inner py-3 px-5 rounded-full text-center mb-7 mt-3">
                             <span className="block capitalize font-semibold text-primary text-lg">{ weather.current.weather[0].description }</span>
                         </div>
-                        <span className="block font-bold text-5xl text-gray-600 text-center">
-                        25 &deg;
-                    </span>
+                        <span className="block font-semibold text-5xl text-gray-600 text-center header-font">
+                            25 &deg;
+                        </span>
                     </div>
                 </div>
 
@@ -53,7 +53,8 @@ export default function Mobile({ weather, diffToHuman }){
                 </div>
             </div>
 
-            <footer id="footer" className="absolute -bottom-8 min-h-xl"><Hourly display="3" weather={weather} diffToHuman={diffToHuman} />
+            <footer id="footer" className="absolute -bottom-8 min-h-xl">
+                <Hourly display="3" weather={weather} diffToHuman={diffToHuman} />
             </footer>
         </div>
     )

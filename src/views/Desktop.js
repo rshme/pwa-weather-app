@@ -42,7 +42,7 @@ export default function Desktop({weather, diffToHuman}){
                     <div
                         className="card glasses-blur glasses-shadow-black rounded-2xl bg-linear-accent text-white grid justify-center text-center p-7">
                         <img src={`http://openweathermap.org/img/wn/${weather.current.weather[0].icon}@4x.png`} alt="" className="weather-icon -mt-14 mx-auto"/>
-                        <span className="block text-5xl font-bold -mt-10 mb-5 ml-4">
+                        <span className="block text-5xl font-bold -mt-10 mb-5 ml-4 header-font">
                               { Math.floor(weather.current.feels_like) } &deg;
                           </span>
                         <h2 className="text-2xl font-medium capitalize">{ weather.current.weather[0].description }</h2>
