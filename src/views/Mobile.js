@@ -1,8 +1,12 @@
 import FeatherIcon from "feather-icons-react";
 import Hourly from "../components/Hourly";
+import { diffToHuman } from "../globalFunction";
 import React from "react";
+import Navbar from "../components/Navbar";
 
-export default function Mobile({ weather, diffToHuman }){
+export default function Mobile({ weather, searchWeather, search, submit }){
+
+
     return(
         <div className="wrapper">
             <div className="px-7 py-5 text-gray-600">
@@ -54,7 +58,7 @@ export default function Mobile({ weather, diffToHuman }){
             </div>
 
             <footer id="footer" className="absolute -bottom-8 min-h-xl">
-                <Hourly display="3" weather={weather} diffToHuman={diffToHuman} />
+                <Hourly display="3" weather={weather} diffToHuman={diffToHuman} searchWeather={searchWeather} search={search} submit={submit} />
             </footer>
         </div>
     )

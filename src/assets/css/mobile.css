@@ -5,8 +5,9 @@
         font-size: 14px;
         overflow-x: hidden;
     }
-    nav {
-        display: none;
+
+    nav a{
+        display: none !important;
     }
 
     .header .right input{
