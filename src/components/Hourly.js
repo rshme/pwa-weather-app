@@ -10,14 +10,14 @@ export default function Hourly({weather, diffToHuman, display, searchWeather, se
     }
 
     return(
-        <div className={`card rounded-3xl glasses-shadow-black w-full text-white p-7 ${display === "7" ? 'bg-linear-accent glasses-blur' : 'bg-primary'}`}>
+        <div className={`card rounded-tl-3xl rounded-tr-3xl glasses-shadow-black w-full text-white p-7 ${display === "7" ? 'bg-linear-accent glasses-blur' : 'bg-primary'}`}>
             <div className={`justify-between ${footerStyles}`}>
                 { weather.hourly.slice(0, display).map((weather, i) => {
                     return(
                         <div className={`wrapper relative text-center ${display === "3" ? 'h-full bg-accent rounded-2xl py-2 px-4 shadow-2xl glasses-blur' : ''}`} key={i}>
-                            <span className="block text-lg">{ diffToHuman(weather.dt).time }</span>
+                            <span className="block text-md">{ diffToHuman(weather.dt).time }</span>
                             <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`} alt="" className={`weather-icon mx-auto -mt-3`}/>
-                            <span className="block text-2xl font-semibold -mt-2 ml-1 header-font">
+                            <span className="block text-xl font-semibold -mt-2 ml-1 header-font">
                             { Math.floor(weather.feels_like) } &deg;
                         </span>
                         </div>
@@ -32,12 +32,12 @@ export default function Hourly({weather, diffToHuman, display, searchWeather, se
                         Background by <a href="https://www.freepik.com">Freepik</a>
                     </span>
                     :
-                        <div className="bg-white rounded-3xl flex items-center py-3 px-5 input-wrapper justify-self-end mt-6">
-                            <FeatherIcon icon="search" width="25" height="25" className="text-gray-500 mr-3" />
+                        <div className="bg-white rounded-3xl flex items-center py-2 px-4 input-wrapper justify-self-end mt-5 mb-3 shadow-2xl">
+                            <FeatherIcon icon="search" width="25" height="25" className="text-gray-500 mr-3 max-w-md" />
                             <input
                             type="text"
                             name="search"
-                            className="border-none text-gray-700 text-center outline-none text-lg bg-transparent max-w-full"
+                            className="border-none text-gray-700 text-center outline-none text-md bg-transparent max-w-3xl"
                             autoComplete="off"
                             placeholder="Search Country or City..."
                             value={search}

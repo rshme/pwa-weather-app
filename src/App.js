@@ -1,7 +1,7 @@
 import React from 'react';
 import './assets/css/App.css';
 import { useState, useEffect } from 'react';
-import { loadWeather } from "./globalFunction";
+import { loadWeather, saveWeather } from "./globalFunction";
 // import views
 import Desktop from "./views/Desktop";
 import Mobile from "./views/Mobile";
@@ -20,6 +20,7 @@ function App() {
     useEffect(() => {
         loadWeather('Jakarta').then(res => {
             setWeather(res)
+            saveWeather(res)
         })
         setScreen(window.screen.width)
     }, [])
@@ -31,6 +32,8 @@ function App() {
         if(e.key === 'Enter'){
            loadWeather(search).then(res => {
                setWeather(res)
+               saveWeather(res)
+               setSearch('')
            })
         }
     }

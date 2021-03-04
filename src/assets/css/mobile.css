@@ -19,7 +19,8 @@
     }
 
     footer > .card{
-        min-height: 17rem !important;
+        min-height: unset !important;
+        padding: 7px 12px;
     }
 
     /*footer .card .wrapper{*/
@@ -31,8 +32,8 @@
     }
 
     .content img.weather-icon{
-        width: 320px !important;
-        height: 320px !important;
+        width: 250px !important;
+        height: 250px !important;
     }
 
     footer .card img.weather-icon{

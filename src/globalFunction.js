@@ -14,7 +14,7 @@ export const loadWeather = async (search) => {
     if(countries.length === 0){
         alert(`Country or City doesn't exists`)
 
-        return false;
+        return JSON.parse(localStorage.getItem('weather'))
     }
 
     const data = await fetchWeather({
@@ -45,4 +45,8 @@ export const diffToHuman = (unix) => {
         time,
         date
     }
+}
+
+export const saveWeather = (weather) => {
+    localStorage.setItem('weather', JSON.stringify(weather))
 }
