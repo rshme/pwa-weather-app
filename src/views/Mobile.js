@@ -12,7 +12,7 @@ export default function Mobile({ weather, searchWeather, search, submit }){
             <div className="px-7 py-5 text-gray-600">
                 <div className="header mb-12">
                     <span className="block text-base text-primary opacity-80 mb-1">Kam, 17 Feb</span>
-                    <h1 className="text-4xl font-bold text-primary">Jakarta</h1>
+                    <h1 className="text-3xl font-bold text-primary">{ weather.name }</h1>
                 </div>
 
                 <div className="w-full flex justify-center mb-6">
@@ -22,7 +22,7 @@ export default function Mobile({ weather, searchWeather, search, submit }){
                             <span className="block capitalize font-semibold text-primary text-md">{ weather.current.weather[0].description }</span>
                         </div>
                         <span className="block font-semibold text-4xl text-gray-600 text-center header-font">
-                            25 &deg;
+                            { Math.round(weather.current.temp) } &deg;
                         </span>
                     </div>
                 </div>
