@@ -1,7 +1,7 @@
-@media screen and (max-width: 380px){
+@media screen and (max-width: 420px){
     body{
         background-image: unset !important;
-        background-color: #f0f0f0;
+        background-color: #ffffff;
         font-size: 14px;
         overflow-x: hidden;
     }
