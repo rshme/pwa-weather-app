@@ -6,10 +6,6 @@ import { loadWeather, saveWeather } from "./globalFunction";
 import Desktop from "./views/Desktop";
 import Mobile from "./views/Mobile";
 
-// import components
-import Hourly from "./components/Hourly";
-import Navbar from "./components/Navbar";
-
 function App() {
     // setting state
     const [screen, setScreen] = useState(false)
@@ -41,7 +37,7 @@ function App() {
   return (
       <div id="app">
           {
-              screen > 380
+              screen > 420
                   ? weather && <Desktop weather={weather} searchWeather={searchWeather} search={search} submit={submit} />
                   : weather && <Mobile weather={weather} searchWeather={searchWeather} search={search} submit={submit} />
           }

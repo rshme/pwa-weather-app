@@ -10,11 +10,11 @@ export default function Desktop({weather, searchWeather, search, submit}){
             <Navbar searchWeather={searchWeather} submit={submit} search={search}/>
 
             <div className="px-32">
-                <div className="header text-white mb-12">
-                <span className="block text-lg mb-3">
-                    { diffToHuman(weather.current.dt).date }
-                </span>
-                    <h1 className="text-6xl font-bold mb-7">
+                <div className="header text-white mb-12 max-w-3xl">
+                    <span className="block text-lg mb-3">
+                        { diffToHuman(weather.current.dt).date }
+                    </span>
+                    <h1 className="text-5xl leading-tight font-bold mb-7">
                         { weather.name }
                     </h1>
                 </div>
@@ -48,7 +48,7 @@ export default function Desktop({weather, searchWeather, search, submit}){
                             className="card glasses-blur glasses-shadow-black rounded-2xl bg-linear-accent text-white grid justify-center text-center p-7">
                             <img src={`http://openweathermap.org/img/wn/${weather.current.weather[0].icon}@4x.png`} alt="" className="weather-icon -mt-14 mx-auto"/>
                             <span className="block text-5xl font-bold -mt-10 mb-5 ml-4 header-font">
-                              { Math.floor(weather.current.feels_like) } &deg;
+                              { Math.floor(weather.current.temp) } &deg;
                           </span>
                             <h2 className="text-2xl font-medium capitalize">{ weather.current.weather[0].description }</h2>
                         </div>

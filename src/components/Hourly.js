@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./Navbar";
 import FeatherIcon from "feather-icons-react";
 
 export default function Hourly({weather, diffToHuman, display, searchWeather, search, submit}){
@@ -18,7 +17,7 @@ export default function Hourly({weather, diffToHuman, display, searchWeather, se
                             <span className="block text-md">{ diffToHuman(weather.dt).time }</span>
                             <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`} alt="" className={`weather-icon mx-auto -mt-3`}/>
                             <span className="block text-xl font-semibold -mt-2 ml-1 header-font">
-                            { Math.floor(weather.feels_like) } &deg;
+                            { Math.floor(weather.temp) } &deg;
                         </span>
                         </div>
                     )
