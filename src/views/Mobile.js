@@ -11,7 +11,7 @@ export default function Mobile({ weather, searchWeather, search, submit }){
         <div className="wrapper">
             <div className="px-7 py-5 text-gray-600">
                 <div className="header mb-12">
-                    <span className="block text-base text-primary opacity-80 mb-1">Kam, 17 Feb</span>
+                    <span className="block text-base text-primary opacity-80 mb-1">{ diffToHuman(weather.current.dt).date }</span>
                     <h1 className="text-3xl font-bold text-primary">{ weather.name }</h1>
                 </div>
 
